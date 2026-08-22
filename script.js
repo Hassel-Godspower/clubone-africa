@@ -1,28 +1,27 @@
 /* =====================================================
    CLUB ONE
-   MAIN JAVASCRIPT
+   GLOBAL JAVASCRIPT
 ===================================================== */
 
 
-/* =====================================================
-   DOM READY
-===================================================== */
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
 
-document.addEventListener("DOMContentLoaded", () => {
+        initializeNavigation();
 
-    initializeNavigation();
+        initializeScrollHeader();
 
-    initializeScrollHeader();
+        initializeRevealAnimations();
 
-    initializeRevealAnimations();
+        initializeCounters();
 
-    initializeCounters();
+        initializeSchoolChecker();
 
-    initializeSchoolChecker();
+        initializeYear();
 
-    initializeYear();
-
-});
+    }
+);
 
 
 /* =====================================================
@@ -43,37 +42,60 @@ function initializeNavigation() {
     }
 
 
-    menuToggle.addEventListener("click", () => {
+    menuToggle.addEventListener(
+        "click",
+        () => {
 
-        const isOpen =
-            mobileNav.classList.toggle("active");
+            const isOpen =
+                mobileNav.classList.toggle("active");
 
-        menuToggle.setAttribute(
-            "aria-expanded",
-            String(isOpen)
-        );
 
-    });
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+
+            menuToggle.classList.toggle(
+                "open",
+                isOpen
+            );
+
+        }
+    );
 
 
     const mobileLinks =
         mobileNav.querySelectorAll("a");
 
 
-    mobileLinks.forEach(link => {
+    mobileLinks.forEach(
+        link => {
 
-        link.addEventListener("click", () => {
+            link.addEventListener(
+                "click",
+                () => {
 
-            mobileNav.classList.remove("active");
+                    mobileNav.classList.remove(
+                        "active"
+                    );
 
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
+
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+
+                    menuToggle.classList.remove(
+                        "open"
+                    );
+
+                }
             );
 
-        });
-
-    });
+        }
+    );
 
 }
 
@@ -93,25 +115,32 @@ function initializeScrollHeader() {
     }
 
 
-    const updateHeader = () => {
+    const updateHeader =
+        () => {
 
-        if (window.scrollY > 30) {
+            if (window.scrollY > 30) {
 
-            header.classList.add("scrolled");
+                header.classList.add(
+                    "scrolled"
+                );
 
-        } else {
+            } else {
 
-            header.classList.remove("scrolled");
+                header.classList.remove(
+                    "scrolled"
+                );
 
-        }
+            }
 
-    };
+        };
 
 
     window.addEventListener(
         "scroll",
         updateHeader,
-        { passive: true }
+        {
+            passive: true
+        }
     );
 
 
@@ -127,7 +156,9 @@ function initializeScrollHeader() {
 function initializeRevealAnimations() {
 
     const elements =
-        document.querySelectorAll(".reveal");
+        document.querySelectorAll(
+            ".reveal"
+        );
 
 
     if (!elements.length) {
@@ -135,23 +166,49 @@ function initializeRevealAnimations() {
     }
 
 
+    if (
+        !("IntersectionObserver" in window)
+    ) {
+
+        elements.forEach(
+            element => {
+
+                element.classList.add(
+                    "active"
+                );
+
+            }
+        );
+
+        return;
+
+    }
+
+
     const observer =
         new IntersectionObserver(
             entries => {
 
-                entries.forEach(entry => {
+                entries.forEach(
+                    entry => {
 
-                    if (entry.isIntersecting) {
+                        if (
+                            entry.isIntersecting
+                        ) {
 
-                        entry.target.classList.add("active");
+                            entry.target.classList.add(
+                                "active"
+                            );
 
-                        observer.unobserve(
-                            entry.target
-                        );
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
 
                     }
-
-                });
+                );
 
             },
             {
@@ -160,11 +217,15 @@ function initializeRevealAnimations() {
         );
 
 
-    elements.forEach(element => {
+    elements.forEach(
+        element => {
 
-        observer.observe(element);
+            observer.observe(
+                element
+            );
 
-    });
+        }
+    );
 
 }
 
@@ -176,7 +237,9 @@ function initializeRevealAnimations() {
 function initializeCounters() {
 
     const counters =
-        document.querySelectorAll(".counter");
+        document.querySelectorAll(
+            ".counter"
+        );
 
 
     if (!counters.length) {
@@ -184,91 +247,111 @@ function initializeCounters() {
     }
 
 
-    const animateCounter = counter => {
+    const animateCounter =
+        counter => {
 
-        const target =
-            Number(counter.dataset.target);
-
-
-        if (!target) {
-            return;
-        }
-
-
-        const duration = 1400;
-
-        const startTime =
-            performance.now();
-
-
-        const update = currentTime => {
-
-            const elapsed =
-                currentTime - startTime;
-
-
-            const progress =
-                Math.min(
-                    elapsed / duration,
-                    1
+            const target =
+                Number(
+                    counter.dataset.target
                 );
 
 
-            const eased =
-                1 - Math.pow(
-                    1 - progress,
-                    3
-                );
-
-
-            const value =
-                Math.floor(
-                    eased * target
-                );
-
-
-            counter.textContent =
-                value.toLocaleString();
-
-
-            if (progress < 1) {
-
-                requestAnimationFrame(update);
-
-            } else {
-
-                counter.textContent =
-                    target.toLocaleString();
-
+            if (!target) {
+                return;
             }
 
+
+            const duration =
+                1400;
+
+
+            const startTime =
+                performance.now();
+
+
+            const update =
+                currentTime => {
+
+                    const elapsed =
+                        currentTime -
+                        startTime;
+
+
+                    const progress =
+                        Math.min(
+                            elapsed /
+                            duration,
+                            1
+                        );
+
+
+                    const eased =
+                        1 -
+                        Math.pow(
+                            1 - progress,
+                            3
+                        );
+
+
+                    const value =
+                        Math.floor(
+                            eased * target
+                        );
+
+
+                    counter.textContent =
+                        value.toLocaleString();
+
+
+                    if (
+                        progress < 1
+                    ) {
+
+                        requestAnimationFrame(
+                            update
+                        );
+
+                    } else {
+
+                        counter.textContent =
+                            target.toLocaleString();
+
+                    }
+
+                };
+
+
+            requestAnimationFrame(
+                update
+            );
+
         };
-
-
-        requestAnimationFrame(update);
-
-    };
 
 
     const observer =
         new IntersectionObserver(
             entries => {
 
-                entries.forEach(entry => {
+                entries.forEach(
+                    entry => {
 
-                    if (entry.isIntersecting) {
+                        if (
+                            entry.isIntersecting
+                        ) {
 
-                        animateCounter(
-                            entry.target
-                        );
+                            animateCounter(
+                                entry.target
+                            );
 
-                        observer.unobserve(
-                            entry.target
-                        );
+
+                            observer.unobserve(
+                                entry.target
+                            );
+
+                        }
 
                     }
-
-                });
+                );
 
             },
             {
@@ -277,11 +360,15 @@ function initializeCounters() {
         );
 
 
-    counters.forEach(counter => {
+    counters.forEach(
+        counter => {
 
-        observer.observe(counter);
+            observer.observe(
+                counter
+            );
 
-    });
+        }
+    );
 
 }
 
@@ -310,16 +397,22 @@ function initializeSchoolChecker() {
         );
 
 
-    if (!form || !input || !result) {
+    if (
+        !form ||
+        !input ||
+        !result
+    ) {
+
         return;
+
     }
 
 
     /*
-       PHASE 1 DEMO DATABASE
+       PHASE 1 SCHOOL DATABASE
 
-       Replace this later with your
-       real Club One database/API.
+       Replace these with the actual
+       participating schools.
     */
 
     const schools = [
@@ -327,29 +420,40 @@ function initializeSchoolChecker() {
         {
             name:
                 "Greenfield Academy",
+
             status:
                 "available"
+
         },
+
 
         {
             name:
                 "Chrisland School",
+
             status:
                 "available"
+
         },
+
 
         {
             name:
                 "Corona Schools",
+
             status:
                 "available"
+
         },
+
 
         {
             name:
                 "Grange School",
+
             status:
                 "available"
+
         }
 
     ];
@@ -385,16 +489,26 @@ function initializeSchoolChecker() {
             const match =
                 schools.find(
                     school =>
+
                         school.name
                             .toLowerCase()
                             .includes(query)
+
                 );
 
 
             if (match) {
 
+                const schoolName =
+                    encodeURIComponent(
+                        match.name
+                    );
+
+
                 showCheckerMessage(
+
                     `
+
                     <strong>
                         ${match.name}
                     </strong>
@@ -409,21 +523,34 @@ function initializeSchoolChecker() {
                     <br><br>
 
                     <a
-                        href="https://wa.me/2347037170129?text=Hello%20Club%20One%2C%20I%20am%20a%20parent%20at%20${encodeURIComponent(match.name)}%20and%20I%20would%20like%20to%20join."
+                        href="https://wa.me/2347037170129?text=Hello%20Club%20One%2C%20I%20am%20a%20parent%20at%20${schoolName}%20and%20I%20would%20like%20to%20join."
                         target="_blank"
                         rel="noopener"
-                        style="font-weight:800;color:#0b452c;"
+                        style="
+                            font-weight:800;
+                            color:#0b452c;
+                        "
                     >
+
                         Continue on WhatsApp →
+
                     </a>
+
                     `,
+
                     "success"
+
                 );
 
-            } else {
+            }
+
+
+            else {
 
                 showCheckerMessage(
+
                     `
+
                     <strong>
                         We couldn't find that school yet.
                     </strong>
@@ -431,21 +558,28 @@ function initializeSchoolChecker() {
                     <br>
 
                     <span>
-                        Leave your details and we'll
-                        let you know when Club One
-                        becomes available at your school.
+                        We are continuing to add schools
+                        to the Club One community.
                     </span>
 
                     <br><br>
 
                     <a
-                        href="#contact"
-                        style="font-weight:800;color:#ef6c00;"
+                        href="contact.html"
+                        style="
+                            font-weight:800;
+                            color:#ef6c00;
+                        "
                     >
+
                         Tell us about your school →
+
                     </a>
+
                     `,
+
                     "warning"
+
                 );
 
             }
@@ -459,12 +593,62 @@ function initializeSchoolChecker() {
         type
     ) {
 
-        result.innerHTML = message;
+        result.innerHTML =
+            message;
+
 
         result.className =
             `checker-result show ${type}`;
 
     }
+
+}
+
+
+/* =====================================================
+   CONTACT FORM
+===================================================== */
+
+function initializeContactForm() {
+
+    const form =
+        document.getElementById(
+            "contactForm"
+        );
+
+
+    if (!form) {
+        return;
+    }
+
+
+    form.addEventListener(
+        "submit",
+        () => {
+
+            const button =
+                form.querySelector(
+                    "button[type='submit']"
+                );
+
+
+            if (!button) {
+                return;
+            }
+
+
+            button.innerHTML =
+                `
+                Sending...
+
+                <i class="fa-solid fa-spinner fa-spin"></i>
+                `;
+
+
+            button.disabled = true;
+
+        }
+    );
 
 }
 
@@ -487,6 +671,7 @@ function initializeYear() {
 
 
     year.textContent =
-        new Date().getFullYear();
+        new Date()
+            .getFullYear();
 
 }
