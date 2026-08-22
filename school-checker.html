@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Check My School | Club One
+    </title>
+
+    <meta
+        name="description"
+        content="Check whether your child's school is participating in Club One."
+    >
+
+    <meta name="theme-color"
+          content="#0b3b28">
+
+    <link rel="icon"
+          href="favicon.svg">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="site-header"
+        id="siteHeader">
+
+    <div class="container nav-container">
+
+        <a href="index.html"
+           class="brand">
+
+            <div class="brand-mark">
+                <span class="brand-ring"></span>
+            </div>
+
+            <div class="brand-text">
+
+                <strong>
+                    CLUB<span>ONE</span>
+                </strong>
+
+                <small>
+                    Together we achieve more!
+                </small>
+
+            </div>
+
+        </a>
+
+
+        <nav class="desktop-nav">
+
+            <a href="index.html">Home</a>
+
+            <a href="about.html">About</a>
+
+            <a href="parents.html">For Parents</a>
+
+            <a href="schools.html">For Schools</a>
+
+            <a href="rewards.html">Rewards</a>
+
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+            <button
+                class="menu-toggle"
+                id="menuToggle">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <div class="mobile-nav"
+         id="mobileNav">
+
+        <a href="index.html">Home</a>
+
+        <a href="about.html">About</a>
+
+        <a href="parents.html">For Parents</a>
+
+        <a href="schools.html">For Schools</a>
+
+        <a href="rewards.html">Rewards</a>
+
+        <a href="contact.html">Contact</a>
+
+    </div>
+
+</header>
+
+
+
+<main>
+
+
+<section class="page-hero checker-page-hero">
+
+    <div class="container">
+
+        <div class="section-label">
+            SCHOOL CHECKER
+        </div>
+
+        <h1>
+
+            Is your child's school
+            <span>
+                part of Club One?
+            </span>
+
+        </h1>
+
+        <p>
+
+            Enter your school name below to check
+            whether it is currently participating.
+
+        </p>
+
+
+        <div class="checker-box standalone-checker">
+
+            <div class="checker-box-header">
+
+                <span class="checker-icon">
+
+                    <i class="fa-solid fa-school"></i>
+
+                </span>
+
+                <div>
+
+                    <strong>
+                        Find your school
+                    </strong>
+
+                    <small>
+                        Search by school name
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <form id="schoolSearchForm">
+
+                <div class="input-wrapper">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="schoolInput"
+                        placeholder="Enter your school name"
+                        autocomplete="off"
+                        required
+                    >
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary full">
+
+                    Check School
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </button>
+
+            </form>
+
+
+            <div
+                class="checker-result"
+                id="checkerResult"
+                aria-live="polite">
+            </div>
+
+
+            <small class="checker-note">
+
+                Can't find your school?
+
+                <a href="contact.html">
+                    Tell us about it.
+                </a>
+
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="section-heading center">
+
+            <div class="section-label">
+                WHAT HAPPENS NEXT?
+            </div>
+
+            <h2>
+
+                Check.
+                <span>
+                    Join. Enjoy.
+                </span>
+
+            </h2>
+
+        </div>
+
+
+        <div class="steps">
+
+            <div class="step">
+
+                <div class="step-number">
+                    01
+                </div>
+
+                <div class="step-icon">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </div>
+
+                <h3>
+                    Check
+                </h3>
+
+                <p>
+                    Search for your child's school.
+                </p>
+
+            </div>
+
+
+            <div class="step-line"></div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <div class="step-icon">
+
+                    <i class="fa-solid fa-id-card"></i>
+
+                </div>
+
+                <h3>
+                    Join
+                </h3>
+
+                <p>
+                    Complete your parent registration.
+                </p>
+
+            </div>
+
+
+            <div class="step-line"></div>
+
+
+            <div class="step">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <div class="step-icon">
+
+                    <i class="fa-solid fa-gift"></i>
+
+                </div>
+
+                <h3>
+                    Enjoy
+                </h3>
+
+                <p>
+                    Access available Club One benefits.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<section class="final-cta">
+
+    <div class="container cta-inner">
+
+        <div class="cta-content">
+
+            <h2>
+
+                Don't see your school?
+                <span>
+                    Let's know.
+                </span>
+
+            </h2>
+
+        </div>
+
+
+        <div class="cta-actions">
+
+            <a href="contact.html"
+               class="btn btn-white">
+
+                Tell Us About Your School
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+<footer class="site-footer">
+
+    <div class="container footer-grid">
+
+        <div class="footer-brand">
+
+            <a href="index.html"
+               class="brand footer-logo">
+
+                <div class="brand-mark">
+                    <span class="brand-ring"></span>
+                </div>
+
+                <div class="brand-text">
+
+                    <strong>
+                        CLUB<span>ONE</span>
+                    </strong>
+
+                    <small>
+                        Together we achieve more!
+                    </small>
+
+                </div>
+
+            </a>
+
+            <p>
+                Supporting parents.
+                Strengthening schools.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Club One</h4>
+
+            <a href="about.html">About</a>
+
+            <a href="parents.html">Parents</a>
+
+            <a href="schools.html">Schools</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Explore</h4>
+
+            <a href="rewards.html">Rewards</a>
+
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>Contact</h4>
+
+            <a href="mailto:hello@clubone.africa">
+                hello@clubone.africa
+            </a>
+
+            <a href="https://wa.me/2347037170129">
+                WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        <span>
+            © <span id="currentYear"></span>
+            Club One. All rights reserved.
+        </span>
+
+    </div>
+
+</footer>
+
+
+<a
+    href="https://wa.me/2347037170129"
+    class="floating-whatsapp"
+    target="_blank">
+
+    <i class="fa-brands fa-whatsapp"></i>
+
+    Chat with us
+
+</a>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
