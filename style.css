@@ -49,6 +49,12 @@
 
 }
 
+.site-logo {
+    width: 150px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
 
 /* =====================================================
    RESET
