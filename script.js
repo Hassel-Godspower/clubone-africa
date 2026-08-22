@@ -9,15 +9,11 @@ document.addEventListener(
     () => {
 
         initializeNavigation();
-
         initializeScrollHeader();
-
         initializeRevealAnimations();
-
+        initializeContactForm();
         initializeCounters();
-
         initializeSchoolChecker();
-
         initializeYear();
 
     }
