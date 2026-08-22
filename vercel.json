@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/",
+      "destination": "/index.html"
+    },
+    {
       "source": "/home",
       "destination": "/index.html"
     },
@@ -23,6 +27,10 @@
     {
       "source": "/contact",
       "destination": "/contact.html"
+    },
+    {
+      "source": "/school-checker",
+      "destination": "/school-checker.html"
     }
   ]
 }
