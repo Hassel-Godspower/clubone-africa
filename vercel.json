@@ -1,0 +1,28 @@
+{
+  "rewrites": [
+    {
+      "source": "/home",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/about.html"
+    },
+    {
+      "source": "/parents",
+      "destination": "/parents.html"
+    },
+    {
+      "source": "/schools",
+      "destination": "/schools.html"
+    },
+    {
+      "source": "/rewards",
+      "destination": "/rewards.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact.html"
+    }
+  ]
+}
