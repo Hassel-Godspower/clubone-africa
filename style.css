@@ -994,6 +994,512 @@ button {
     font-size: 1.15rem;
 }
 
+/* =====================================================
+   CLUB ONE EVENT ACTIONS
+===================================================== */
+
+.event-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+
+/* =====================================================
+   REGISTER FOR FAIR
+===================================================== */
+
+.event-register-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+
+    min-height: 62px;
+    padding: 0 30px;
+
+    border-radius: 999px;
+
+    background: #ff851b;
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: "Manrope", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+
+    box-shadow:
+        0 14px 35px rgba(255, 133, 27, 0.20);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.event-register-btn:hover {
+    transform: translateY(-3px);
+
+    background: #f57a0a;
+
+    box-shadow:
+        0 18px 40px rgba(255, 133, 27, 0.30);
+}
+
+
+.event-register-btn i {
+    font-size: 16px;
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+.event-register-btn:hover i {
+    transform: translateX(4px);
+}
+
+
+/* =====================================================
+   CLUB ONE CARD OFFER
+===================================================== */
+
+.club-card-offer {
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 84px;
+    min-width: 390px;
+
+    padding: 10px 14px 10px 10px;
+
+    gap: 15px;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #073523 0%,
+            #0b3b28 55%,
+            #12553b 100%
+        );
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 35px rgba(11, 59, 40, 0.20);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.club-card-offer::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    right: -70px;
+    top: -80px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    pointer-events: none;
+}
+
+
+.club-card-offer:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 20px 45px rgba(11, 59, 40, 0.28);
+}
+
+
+/* =====================================================
+   MINI CARD VISUAL
+===================================================== */
+
+.club-card-mini {
+
+    position: relative;
+
+    flex-shrink: 0;
+
+    width: 104px;
+    height: 64px;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6d061d,
+            #a70d31 55%,
+            #d31d42
+        );
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, 0.25);
+
+    overflow: hidden;
+
+    transform: rotate(-2deg);
+}
+
+
+.club-card-mini::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: -14px;
+    top: -12px;
+
+    width: 42px;
+    height: 90px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.05),
+            rgba(255, 255, 255, 0.35),
+            rgba(255, 255, 255, 0.05)
+        );
+
+    transform: rotate(35deg);
+}
+
+
+.club-card-mini-inner {
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    height: 100%;
+
+    padding: 9px 10px;
+
+    box-sizing: border-box;
+}
+
+
+.club-card-mini strong {
+
+    margin-top: 5px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.3px;
+}
+
+
+.club-card-mini strong span {
+
+    color: #f1a23a;
+}
+
+
+.club-card-mini small {
+
+    margin-top: 2px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 6px;
+
+    letter-spacing: 0.7px;
+
+    opacity: 0.9;
+}
+
+
+.mini-chip {
+
+    width: 17px;
+    height: 12px;
+
+    border-radius: 3px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4d37c,
+            #fff0b5,
+            #cda54c
+        );
+
+    box-shadow:
+        inset 0 0 0 1px rgba(80, 50, 0, 0.25);
+}
+
+
+/* =====================================================
+   CARD OFFER CONTENT
+===================================================== */
+
+.club-card-offer-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    flex: 1;
+
+    min-width: 0;
+}
+
+
+.club-card-offer-label {
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.2px;
+
+    color: #f6b34d;
+}
+
+
+.club-card-offer-title {
+
+    margin-top: 2px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 800;
+}
+
+
+.club-card-price {
+
+    margin-top: 1px;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 800;
+
+    color: #ffffff;
+}
+
+
+.club-card-benefit {
+
+    margin-top: 3px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    opacity: 0.82;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   CARD ARROW
+===================================================== */
+
+.club-card-arrow {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #0b3b28;
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+.club-card-offer:hover .club-card-arrow {
+
+    transform: translateX(4px);
+}
+
+
+/* =====================================================
+   WHATSAPP EVENT LINK
+===================================================== */
+
+.event-whatsapp-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    min-height: 62px;
+
+    padding: 0 12px;
+
+    color: #0b3b28;
+
+    text-decoration: none;
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 800;
+}
+
+
+.event-whatsapp-btn i {
+
+    font-size: 25px;
+
+    color: #0b3b28;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .event-actions {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        width: 100%;
+    }
+
+
+    .event-register-btn {
+
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+
+
+    .club-card-offer {
+
+        width: 100%;
+
+        min-width: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    .event-whatsapp-btn {
+
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .club-card-offer {
+
+        min-height: 78px;
+
+        gap: 11px;
+
+        padding: 9px;
+    }
+
+
+    .club-card-mini {
+
+        width: 88px;
+        height: 55px;
+    }
+
+
+    .club-card-offer-title {
+
+        font-size: 14px;
+    }
+
+
+    .club-card-price {
+
+        font-size: 14px;
+    }
+
+
+    .club-card-benefit {
+
+        font-size: 10px;
+
+        white-space: normal;
+    }
+
+
+    .club-card-arrow {
+
+        width: 34px;
+        height: 34px;
+    }
+
+}
 
 /* =====================================================
    EVENT RESPONSIVE
