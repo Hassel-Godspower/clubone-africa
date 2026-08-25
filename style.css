@@ -4664,3 +4664,381 @@ button {
     }
 
 }
+
+/* =====================================================
+   SCHOOL CHECKER RESULTS
+===================================================== */
+
+.checker-result {
+    margin-top: 18px;
+    width: 100%;
+}
+
+
+/* =====================================================
+   RESULT MESSAGE
+===================================================== */
+
+.checker-message {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+
+    padding: 16px;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+
+    animation: checkerFadeIn 0.3s ease;
+}
+
+
+@keyframes checkerFadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =====================================================
+   MESSAGE ICON
+===================================================== */
+
+.checker-message-icon {
+
+    width: 38px;
+    height: 38px;
+
+    flex: 0 0 38px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+
+}
+
+
+/* =====================================================
+   MESSAGE CONTENT
+===================================================== */
+
+.checker-message-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+.checker-message-content strong {
+    font-size: 15px;
+    line-height: 1.3;
+}
+
+
+.checker-message-content span {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+.checker-message-content small {
+    margin-top: 3px;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   SUCCESS
+===================================================== */
+
+.checker-success {
+
+    background: #edf9f1;
+
+    border-color: #bde5ca;
+
+}
+
+
+.checker-success .checker-message-icon {
+
+    background: #0b6b3a;
+
+    color: #ffffff;
+
+}
+
+
+.checker-success strong {
+    color: #075c31;
+}
+
+
+.checker-success span {
+    color: #164c30;
+}
+
+
+.checker-success small {
+    color: #4c6b58;
+}
+
+
+/* =====================================================
+   ERROR
+===================================================== */
+
+.checker-error {
+
+    background: #fff5f3;
+
+    border-color: #f0c9c2;
+
+}
+
+
+.checker-error .checker-message-icon {
+
+    background: #c93c2f;
+
+    color: #ffffff;
+
+}
+
+
+.checker-error strong {
+    color: #a52d23;
+}
+
+
+.checker-error span {
+    color: #63342f;
+}
+
+
+.checker-error small {
+    color: #80615d;
+}
+
+
+/* =====================================================
+   WARNING
+===================================================== */
+
+.checker-warning {
+
+    background: #fff9ed;
+
+    border-color: #f0dfb0;
+
+}
+
+
+.checker-warning .checker-message-icon {
+
+    background: #d99a17;
+
+    color: #ffffff;
+
+}
+
+
+.checker-warning strong {
+    color: #9a6807;
+}
+
+
+.checker-warning span {
+    color: #715a2c;
+}
+
+
+/* =====================================================
+   INFO
+===================================================== */
+
+.checker-info {
+
+    background: #f2f7f5;
+
+    border-color: #cfe1d8;
+
+}
+
+
+.checker-info .checker-message-icon {
+
+    background: #0b3b28;
+
+    color: #ffffff;
+
+}
+
+
+.checker-info strong {
+    color: #0b3b28;
+}
+
+
+.checker-info span {
+    color: #496158;
+}
+
+
+/* =====================================================
+   POSSIBLE SCHOOL MATCHES
+===================================================== */
+
+.school-match-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 10px;
+
+}
+
+
+.school-match {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 13px 14px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce7e1;
+
+    border-radius: 12px;
+
+    color: #173d2d;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+.school-match:hover {
+
+    transform: translateY(-2px);
+
+    border-color: #0b6b3a;
+
+    background: #f4faf7;
+
+}
+
+
+.school-match span {
+
+    flex: 1;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+.school-match > i:first-child {
+
+    color: #0b6b3a;
+
+}
+
+
+.school-match > i:last-child {
+
+    font-size: 12px;
+
+    opacity: 0.6;
+
+}
+
+
+/* =====================================================
+   CONTACT BUTTON
+===================================================== */
+
+.checker-contact-btn {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 13px 16px;
+
+    border-radius: 10px;
+
+    background: #0b3b28;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+
+}
+
+
+.checker-contact-btn:hover {
+
+    transform: translateY(-2px);
+
+    background: #075c31;
+
+}
+
+
+.checker-contact-btn i:last-child {
+
+    font-size: 11px;
+
+}
