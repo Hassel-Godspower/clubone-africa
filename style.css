@@ -5295,3 +5295,449 @@ button {
 .announcement-button:hover {
     transform: translateY(-1px);
 }
+
+/* =========================================================
+   EVENT REGISTRATION PAGE
+========================================================= */
+
+.registration-page {
+    background: #f4f7f4;
+}
+
+
+.registration-section {
+    padding: 80px 0 100px;
+}
+
+
+.registration-container {
+    max-width: 900px;
+}
+
+
+.registration-intro {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 45px;
+}
+
+
+.registration-intro h1 {
+
+    font-family: "Manrope", sans-serif;
+
+    font-size: clamp(40px, 6vw, 64px);
+
+    line-height: 1.05;
+
+    color: #0b3b28;
+
+    margin: 15px 0 20px;
+}
+
+
+.registration-intro h1 span {
+    color: #e67e22;
+}
+
+
+.registration-intro p {
+
+    color: #647069;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+}
+
+
+.registration-event-info {
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+
+.registration-event-info div {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 14px;
+
+    border-radius: 999px;
+
+    background: #ffffff;
+
+    color: #345145;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.registration-event-info i {
+    color: #e67e22;
+}
+
+
+.registration-card {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    padding: 35px;
+
+    background: #ffffff;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 25px 70px rgba(11, 59, 40, .08);
+}
+
+
+.registration-card-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+}
+
+
+.registration-icon {
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #edf6f1;
+
+    color: #0b3b28;
+
+    font-size: 21px;
+}
+
+
+.registration-card-header h2 {
+
+    margin: 0;
+
+    color: #0b3b28;
+
+    font-family: "Manrope", sans-serif;
+}
+
+
+.registration-card-header p {
+
+    margin: 3px 0 0;
+
+    color: #78827d;
+
+    font-size: 13px;
+}
+
+
+.event-registration-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+
+.form-group > label {
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #253e34;
+}
+
+
+.form-group > label span {
+    color: #e67e22;
+}
+
+
+.form-group input[type="text"] {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 15px 16px;
+
+    border: 1px solid #dce4df;
+
+    border-radius: 12px;
+
+    background: #fbfcfb;
+
+    font: inherit;
+
+    color: #17392c;
+
+    outline: none;
+}
+
+
+.form-group input[type="text"]:focus {
+
+    border-color: #0b3b28;
+
+    box-shadow:
+        0 0 0 3px rgba(11,59,40,.08);
+}
+
+
+.form-group small {
+
+    color: #89928d;
+
+    font-size: 11px;
+}
+
+
+.radio-options {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+
+.radio-card {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 16px;
+
+    border: 1px solid #dce4df;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    color: #30493e;
+
+    font-weight: 600;
+
+    transition: .2s ease;
+}
+
+
+.radio-card:hover {
+    border-color: #0b3b28;
+}
+
+
+.radio-card input {
+
+    position: absolute;
+
+    opacity: 0;
+}
+
+
+.radio-custom {
+
+    width: 17px;
+    height: 17px;
+
+    border: 2px solid #bdc8c2;
+
+    border-radius: 50%;
+
+    position: relative;
+}
+
+
+.radio-card input:checked
+~ .radio-custom {
+
+    border-color: #0b3b28;
+}
+
+
+.radio-card input:checked
+~ .radio-custom::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    background: #0b3b28;
+
+    border-radius: 50%;
+
+    top: 3px;
+    left: 3px;
+}
+
+
+.card-price-note {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    background: #fff8ee;
+
+    color: #725738;
+
+    font-size: 12px;
+}
+
+
+.card-price-note i {
+    color: #e67e22;
+}
+
+
+.registration-submit {
+
+    width: 100%;
+
+    justify-content: center;
+
+    border: 0;
+
+    padding: 16px;
+
+    font: inherit;
+
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+
+.registration-note {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin: 0;
+
+    color: #818b85;
+
+    font-size: 11px;
+
+    text-align: center;
+}
+
+
+.registration-note i {
+    color: #25d366;
+}
+
+
+.registration-back {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #0b3b28;
+
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+@media (max-width: 600px) {
+
+    .registration-section {
+        padding: 50px 0 70px;
+    }
+
+
+    .registration-card {
+        padding: 23px;
+        border-radius: 20px;
+    }
+
+
+    .registration-event-info {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+
+    .registration-event-info div {
+        justify-content: center;
+    }
+
+
+    .radio-options {
+        grid-template-columns: 1fr;
+    }
+
+
+    .registration-back {
+        font-size: 12px;
+    }
+
+}
