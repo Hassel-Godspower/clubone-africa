@@ -60,42 +60,74 @@
      HEADER
 ===================================================== -->
 
-<header class="site-header">
-<header class="site-header"
-        id="siteHeader">
+<header
+    class="site-header"
+    id="siteHeader"
+>
 
     <div class="container nav-container">
 
-            <a href="/home" class="brand">
-               <img
-                 src="/assets/clubone-logo.jpg"
-                 alt="ClubOne — Together we achieve more!"
-                 class="site-logo"
-             >
+
+        <!-- BRAND -->
+
+        <a
+            href="/home"
+            class="brand"
+        >
+
+            <img
+                src="/assets/clubone-logo.jpg"
+                alt="ClubOne — Together we achieve more!"
+                class="site-logo"
+            >
+
+        </a>
+
+
+
+        <!-- DESKTOP NAVIGATION -->
+
+        <nav
+            class="desktop-nav"
+            aria-label="Main Navigation"
+        >
+
+            <a href="/home">
+                Home
             </a>
 
+            <a href="/about">
+                About
+            </a>
 
-        <nav class="desktop-nav">
+            <a href="/parents">
+                For Parents
+            </a>
 
-            <a href="index.html">Home</a>
+            <a href="/schools">
+                For Schools
+            </a>
 
-            <a href="about.html">About</a>
+            <a href="/rewards">
+                Rewards
+            </a>
 
-            <a href="parents.html">For Parents</a>
-
-            <a href="schools.html">For Schools</a>
-
-            <a href="rewards.html">Rewards</a>
-
-            <a href="contact.html">Contact</a>
+            <a href="/contact">
+                Contact
+            </a>
 
         </nav>
 
 
+
+        <!-- NAV ACTIONS -->
+
         <div class="nav-actions">
 
-            <a href="school-checker.html"
-               class="nav-cta">
+            <a
+                href="/school-checker"
+                class="nav-cta"
+            >
 
                 Check My School
 
@@ -104,7 +136,10 @@
 
             <button
                 class="menu-toggle"
-                id="menuToggle">
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
 
                 <span></span>
                 <span></span>
@@ -117,18 +152,43 @@
     </div>
 
 
-    <div class="mobile-nav"
-         id="mobileNav">
 
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="parents.html">For Parents</a>
-        <a href="schools.html">For Schools</a>
-        <a href="rewards.html">Rewards</a>
-        <a href="contact.html">Contact</a>
+    <!-- MOBILE NAVIGATION -->
 
-        <a href="school-checker.html"
-           class="mobile-nav-cta">
+    <div
+        class="mobile-nav"
+        id="mobileNav"
+    >
+
+        <a href="/home">
+            Home
+        </a>
+
+        <a href="/about">
+            About
+        </a>
+
+        <a href="/parents">
+            For Parents
+        </a>
+
+        <a href="/schools">
+            For Schools
+        </a>
+
+        <a href="/rewards">
+            Rewards
+        </a>
+
+        <a href="/contact">
+            Contact
+        </a>
+
+
+        <a
+            href="/school-checker"
+            class="mobile-nav-cta"
+        >
 
             Check My School
 
@@ -139,350 +199,423 @@
 </header>
 
 
+
+
+
 <!-- =====================================================
      REGISTRATION
 ===================================================== -->
 
 <main>
 
-<section class="registration-section">
+    <section class="registration-section">
 
-    <div class="container registration-container">
-
-
-        <div class="registration-intro">
-
-            <div class="section-label">
-                CLUB ONE SPECIAL EVENT
-            </div>
+        <div class="container registration-container">
 
 
-            <h1>
+            <!-- =================================================
+                 REGISTRATION INTRO
+            ================================================== -->
 
-                Register for the
-                <span>Back-to-School Fair 2026.</span>
+            <div class="registration-intro">
 
-            </h1>
-
-
-            <p>
-
-                Join us at Ikeja City Mall on August 28–29
-                for a special back-to-school experience
-                designed for parents and families.
-
-            </p>
+                <div class="section-label">
+                    CLUB ONE SPECIAL EVENT
+                </div>
 
 
-            <div class="registration-event-info">
+                <h1>
 
-                <div>
-
-                    <i class="fa-solid fa-calendar-days"></i>
+                    Register for the
 
                     <span>
-                        August 28–29, 2026
+                        Back-to-School Fair 2026.
                     </span>
 
-                </div>
+                </h1>
 
 
-                <div>
+                <p>
 
-                    <i class="fa-solid fa-location-dot"></i>
-
-                    <span>
-                        Ikeja City Mall, Lagos
-                    </span>
-
-                </div>
-
-
-                <div>
-
-                    <i class="fa-solid fa-clock"></i>
-
-                    <span>
-                        9:00 AM – 5:00 PM
-                    </span>
-
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-        <!-- FORM -->
-
-        <div class="registration-card">
-
-            <div class="registration-card-header">
-
-                <span class="registration-icon">
-
-                    <i class="fa-solid fa-clipboard-list"></i>
-
-                </span>
-
-                <div>
-
-                    <h2>
-                        Event Registration
-                    </h2>
-
-                    <p>
-                        Tell us a little about your family.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-
-            <form
-                id="eventRegistrationForm"
-                class="event-registration-form"
-            >
-
-
-                <!-- PARENT NAME -->
-
-                <div class="form-group">
-
-                    <label for="parentName">
-
-                        Parent Name
-
-                        <span>*</span>
-
-                    </label>
-
-                    <input
-                        type="text"
-                        id="parentName"
-                        name="parentName"
-                        placeholder="Enter your full name"
-                        autocomplete="name"
-                        required
-                    >
-
-                </div>
-
-
-
-                <!-- WARD NAME -->
-
-                <div class="form-group">
-
-                    <label for="wardName">
-
-                        Ward (Child) Name(s)
-
-                        <span>*</span>
-
-                    </label>
-
-                    <input
-                        type="text"
-                        id="wardName"
-                        name="wardName"
-                        placeholder="Enter child's name(s)"
-                        required
-                    >
-
-                    <small>
-                        You may enter more than one child's name.
-                    </small>
-
-                </div>
-
-
-
-                <!-- SCHOOL -->
-
-                <div class="form-group">
-
-                    <label for="wardSchool">
-
-                        Ward School
-
-                        <span>*</span>
-
-                    </label>
-
-                    <input
-                        type="text"
-                        id="wardSchool"
-                        name="wardSchool"
-                        placeholder="Enter child's school"
-                        required
-                    >
-
-                </div>
-
-
-
-                <!-- CARD REGISTERED -->
-
-                <div class="form-group">
-
-                    <label>
-
-                        I have registered for the
-                        Club One Card
-
-                        <span>*</span>
-
-                    </label>
-
-
-                    <div class="radio-options">
-
-                        <label class="radio-card">
-
-                            <input
-                                type="radio"
-                                name="cardRegistered"
-                                value="YES"
-                                required
-                            >
-
-                            <span class="radio-custom"></span>
-
-                            <span>
-                                Yes
-                            </span>
-
-                        </label>
-
-
-                        <label class="radio-card">
-
-                            <input
-                                type="radio"
-                                name="cardRegistered"
-                                value="NO"
-                            >
-
-                            <span class="radio-custom"></span>
-
-                            <span>
-                                No
-                            </span>
-
-                        </label>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- GET CARD AT EVENT -->
-
-                <div class="form-group">
-
-                    <label>
-
-                        I would like to get the Club One
-                        Card at the event
-
-                        <span>*</span>
-
-                    </label>
-
-
-                    <div class="card-price-note">
-
-                        <i class="fa-solid fa-id-card"></i>
-
-                        Club One Card:
-                        <strong>₦4,567</strong>
-
-                    </div>
-
-
-                    <div class="radio-options">
-
-                        <label class="radio-card">
-
-                            <input
-                                type="radio"
-                                name="getCardAtEvent"
-                                value="YES"
-                                required
-                            >
-
-                            <span class="radio-custom"></span>
-
-                            <span>
-                                Yes
-                            </span>
-
-                        </label>
-
-
-                        <label class="radio-card">
-
-                            <input
-                                type="radio"
-                                name="getCardAtEvent"
-                                value="NO"
-                            >
-
-                            <span class="radio-custom"></span>
-
-                            <span>
-                                No
-                            </span>
-
-                        </label>
-
-                    </div>
-
-                </div>
-
-
-
-                <!-- SUBMIT -->
-
-                <button
-                    type="submit"
-                    class="btn btn-event registration-submit"
-                >
-
-                    Submit Registration
-
-                    <i class="fa-brands fa-whatsapp"></i>
-
-                </button>
-
-
-                <p class="registration-note">
-
-                    <i class="fa-brands fa-whatsapp"></i>
-
-                    Your registration details will be used to process your registration for the event.
+                    Join us at Ikeja City Mall on August 28–29
+                    for a special back-to-school experience
+                    designed for parents and families.
 
                 </p>
 
-            </form>
+
+
+                <!-- EVENT INFORMATION -->
+
+                <div class="registration-event-info">
+
+
+                    <div>
+
+                        <i class="fa-solid fa-calendar-days"></i>
+
+                        <span>
+                            August 28–29, 2026
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span>
+                            Ikeja City Mall, Lagos
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="fa-solid fa-clock"></i>
+
+                        <span>
+                            9:00 AM – 5:00 PM
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+
+
+            <!-- =================================================
+                 REGISTRATION FORM
+            ================================================== -->
+
+            <div class="registration-card">
+
+
+                <!-- FORM HEADER -->
+
+                <div class="registration-card-header">
+
+                    <span class="registration-icon">
+
+                        <i class="fa-solid fa-clipboard-list"></i>
+
+                    </span>
+
+
+                    <div>
+
+                        <h2>
+                            Event Registration
+                        </h2>
+
+                        <p>
+                            Tell us a little about your family.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+                <!-- FORM -->
+
+                <form
+                    id="eventRegistrationForm"
+                    class="event-registration-form"
+                >
+
+
+                    <!-- =========================================
+                         PARENT NAME
+                    ========================================== -->
+
+                    <div class="form-group">
+
+                        <label for="parentName">
+
+                            Parent Name
+
+                            <span>*</span>
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="parentName"
+                            name="parentName"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required
+                        >
+
+                    </div>
+
+
+
+
+
+                    <!-- =========================================
+                         WARD NAME
+                    ========================================== -->
+
+                    <div class="form-group">
+
+                        <label for="wardName">
+
+                            Ward (Child) Name(s)
+
+                            <span>*</span>
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="wardName"
+                            name="wardName"
+                            placeholder="Enter child's name(s)"
+                            required
+                        >
+
+
+                        <small>
+
+                            You may enter more than one child's name.
+
+                        </small>
+
+                    </div>
+
+
+
+
+
+                    <!-- =========================================
+                         SCHOOL
+                    ========================================== -->
+
+                    <div class="form-group">
+
+                        <label for="wardSchool">
+
+                            Ward School
+
+                            <span>*</span>
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="wardSchool"
+                            name="wardSchool"
+                            placeholder="Enter child's school"
+                            required
+                        >
+
+                    </div>
+
+
+
+
+
+                    <!-- =========================================
+                         CLUB ONE CARD — ALREADY REGISTERED
+                    ========================================== -->
+
+                    <div class="form-group">
+
+                        <label>
+
+                            I have registered for the
+                            Club One Card
+
+                            <span>*</span>
+
+                        </label>
+
+
+                        <div class="radio-options">
+
+
+                            <label class="radio-card">
+
+                                <input
+                                    type="radio"
+                                    name="cardRegistered"
+                                    value="YES"
+                                    required
+                                >
+
+                                <span class="radio-custom"></span>
+
+                                <span>
+                                    Yes
+                                </span>
+
+                            </label>
+
+
+
+                            <label class="radio-card">
+
+                                <input
+                                    type="radio"
+                                    name="cardRegistered"
+                                    value="NO"
+                                >
+
+                                <span class="radio-custom"></span>
+
+                                <span>
+                                    No
+                                </span>
+
+                            </label>
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    <!-- =========================================
+                         GET CARD AT EVENT
+                    ========================================== -->
+
+                    <div class="form-group">
+
+                        <label>
+
+                            I would like to get the
+                            Club One Card at the event
+
+                            <span>*</span>
+
+                        </label>
+
+
+                        <div class="card-price-note">
+
+                            <i class="fa-solid fa-id-card"></i>
+
+                            Club One Card:
+
+                            <strong>
+                                ₦4,567
+                            </strong>
+
+                        </div>
+
+
+                        <div class="radio-options">
+
+
+                            <label class="radio-card">
+
+                                <input
+                                    type="radio"
+                                    name="getCardAtEvent"
+                                    value="YES"
+                                    required
+                                >
+
+                                <span class="radio-custom"></span>
+
+                                <span>
+                                    Yes
+                                </span>
+
+                            </label>
+
+
+
+                            <label class="radio-card">
+
+                                <input
+                                    type="radio"
+                                    name="getCardAtEvent"
+                                    value="NO"
+                                >
+
+                                <span class="radio-custom"></span>
+
+                                <span>
+                                    No
+                                </span>
+
+                            </label>
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    <!-- =========================================
+                         SUBMIT
+                    ========================================== -->
+
+                    <button
+                        type="submit"
+                        class="btn btn-event registration-submit"
+                    >
+
+                        Submit Registration
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </button>
+
+
+                    <!-- REGISTRATION NOTE -->
+
+                    <p class="registration-note">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                        Your registration details will be used
+                        to process your registration for the event.
+
+                    </p>
+
+
+                </form>
+
+            </div>
 
         </div>
 
-    </div>
-
-</section>
+    </section>
 
 </main>
 
 
 
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script src="event-registration.js"></script>
 
 </body>
 
-                  </html>
+</html>
