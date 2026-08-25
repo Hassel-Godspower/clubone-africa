@@ -5195,3 +5195,103 @@ button {
 .school-suggestion i {
     color: #0b3b28;
 }
+
+/* =========================================================
+   TEMPORARY EVENT ANNOUNCEMENT
+========================================================= */
+
+.event-announcement {
+    background: #0b3b28;
+    color: #ffffff;
+    position: relative;
+    z-index: 1000;
+}
+
+
+.event-announcement-inner {
+    min-height: 52px;
+
+    max-width: 1240px;
+    margin: auto;
+
+    padding: 8px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    font-size: 13px;
+}
+
+
+.event-live-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #f7941d;
+
+    box-shadow:
+        0 0 0 5px rgba(247, 148, 29, 0.15);
+}
+
+
+.event-announcement strong {
+    font-weight: 800;
+}
+
+
+.announcement-divider {
+    opacity: 0.4;
+}
+
+
+.announcement-countdown {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+
+.announcement-countdown span {
+    display: flex;
+    align-items: baseline;
+    gap: 3px;
+}
+
+
+.announcement-countdown strong {
+    font-size: 14px;
+}
+
+
+.announcement-countdown small {
+    font-size: 8px;
+    opacity: 0.65;
+}
+
+
+.announcement-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 9px 15px;
+
+    background: #f7941d;
+    color: #ffffff;
+
+    border-radius: 999px;
+
+    font-weight: 700;
+    text-decoration: none;
+
+    margin-left: 6px;
+}
+
+
+.announcement-button:hover {
+    transform: translateY(-1px);
+}
