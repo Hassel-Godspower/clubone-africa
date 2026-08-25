@@ -5042,3 +5042,156 @@ button {
     font-size: 11px;
 
 }
+
+/* =========================================================
+   SCHOOL CHECKER RESULTS
+========================================================= */
+
+.checker-result {
+    margin-top: 18px;
+}
+
+
+/* RESULT CARD */
+
+.checker-message {
+    display: flex;
+    gap: 14px;
+    padding: 18px;
+    border-radius: 16px;
+    background: #ffffff;
+    border: 1px solid rgba(11, 59, 40, 0.10);
+}
+
+
+.checker-message.success {
+    box-shadow: 0 10px 30px rgba(11, 59, 40, 0.08);
+}
+
+
+.checker-result-icon {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e8f7ef;
+    color: #0b3b28;
+
+    font-size: 18px;
+}
+
+
+.checker-result-content {
+    flex: 1;
+}
+
+
+.checker-result-content strong {
+    display: block;
+    color: #0b3b28;
+    font-weight: 700;
+}
+
+
+.checker-result-content p {
+    margin: 5px 0 12px;
+    color: #5c6862;
+    line-height: 1.6;
+}
+
+
+.checker-result-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #0b3b28;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+
+.checker-result-button:hover {
+    text-decoration: underline;
+}
+
+
+/* NOT FOUND */
+
+.checker-message.not-found {
+    background: #fffaf3;
+    border-color: rgba(230, 126, 34, 0.15);
+}
+
+
+.checker-message.not-found
+.checker-result-icon {
+    background: #fff0dc;
+    color: #e67e22;
+}
+
+
+/* =========================================================
+   SCHOOL SUGGESTIONS
+========================================================= */
+
+.school-suggestions {
+    margin-top: 10px;
+
+    background: #ffffff;
+
+    border: 1px solid rgba(11, 59, 40, 0.10);
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+.school-suggestion {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 13px 16px;
+
+    border: 0;
+    border-bottom: 1px solid #eef2ef;
+
+    background: #ffffff;
+
+    color: #18382b;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font: inherit;
+}
+
+
+.school-suggestion:last-child {
+    border-bottom: 0;
+}
+
+
+.school-suggestion:hover {
+    background: #f3f8f5;
+}
+
+
+.school-suggestion i {
+    color: #0b3b28;
+}
