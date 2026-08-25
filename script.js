@@ -671,3 +671,345 @@ function initializeYear() {
             .getFullYear();
 
 }
+
+/* =====================================================
+   CLUB ONE SCHOOL CHECKER
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const schoolSearchForm = document.getElementById("schoolSearchForm");
+    const schoolInput = document.getElementById("schoolInput");
+    const checkerResult = document.getElementById("checkerResult");
+
+    if (!schoolSearchForm || !schoolInput || !checkerResult) {
+        return;
+    }
+
+
+    /* =====================================================
+       REGISTERED CLUB ONE SCHOOLS
+    ===================================================== */
+
+    const registeredSchools = [
+        "Everbright College",
+        "Tombey Schools",
+        "Kintobs Schools",
+        "Racy & Sturdy Schools",
+        "St Marcs Schools",
+        "Effortswill Schools",
+        "Favour Auditory Oral School",
+        "De Margarette School",
+        "Testimony Schools",
+        "Divine Blessed Schools",
+        "Soluk School",
+        "Lizzyday Schools",
+        "Purdue Infant School",
+        "The Life Changer",
+        "Altitude Schools",
+        "Beehive Schools",
+        "Great Learners Academy",
+        "Alpha Rehoboth Group of Schools",
+        "Was-Lat Group of Schools",
+        "Cedarmount School",
+        "Early Advantage Montessori Schools"
+    ];
+
+
+    /* =====================================================
+       NORMALIZE SEARCH
+    ===================================================== */
+
+    function normalizeSchoolName(name) {
+
+        return name
+            .toLowerCase()
+            .replace(/&/g, "and")
+            .replace(/[^a-z0-9\s]/g, "")
+            .replace(/\s+/g, " ")
+            .trim();
+
+    }
+
+
+    /* =====================================================
+       SEARCH
+    ===================================================== */
+
+    schoolSearchForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const searchValue = schoolInput.value.trim();
+
+
+        if (!searchValue) {
+
+            checkerResult.innerHTML = `
+                <div class="checker-message checker-warning">
+
+                    <div class="checker-message-icon">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </div>
+
+                    <div>
+                        <strong>Enter your school name</strong>
+
+                        <span>
+                            Please enter the name of your child's school.
+                        </span>
+                    </div>
+
+                </div>
+            `;
+
+            return;
+        }
+
+
+        const normalizedSearch = normalizeSchoolName(searchValue);
+
+
+        /* =================================================
+           EXACT MATCH
+        ================================================= */
+
+        const exactMatch = registeredSchools.find(function (school) {
+
+            return normalizeSchoolName(school) === normalizedSearch;
+
+        });
+
+
+        if (exactMatch) {
+
+            showSchoolFound(exactMatch);
+
+            return;
+        }
+
+
+        /* =================================================
+           PARTIAL MATCH
+        ================================================= */
+
+        const matches = registeredSchools.filter(function (school) {
+
+            const normalizedSchool = normalizeSchoolName(school);
+
+            return normalizedSchool.includes(normalizedSearch);
+
+        });
+
+
+        if (matches.length > 0) {
+
+            showPossibleMatches(matches);
+
+            return;
+        }
+
+
+        /* =================================================
+           SCHOOL NOT FOUND
+        ================================================= */
+
+        showSchoolNotFound(searchValue);
+
+    });
+
+
+    /* =====================================================
+       SCHOOL FOUND
+    ===================================================== */
+
+    function showSchoolFound(school) {
+
+        checkerResult.innerHTML = `
+
+            <div class="checker-message checker-success">
+
+                <div class="checker-message-icon">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                </div>
+
+
+                <div class="checker-message-content">
+
+                    <strong>
+                        School Found!
+                    </strong>
+
+                    <span>
+                        ${school}
+                    </span>
+
+                    <small>
+                        This school is currently registered
+                        with Club One.
+                    </small>
+
+                </div>
+
+            </div>
+
+        `;
+
+    }
+
+
+    /* =====================================================
+       POSSIBLE MATCHES
+    ===================================================== */
+
+    function showPossibleMatches(matches) {
+
+        const matchList = matches.map(function (school) {
+
+            return `
+                <button
+                    type="button"
+                    class="school-match"
+                    data-school="${school}"
+                >
+                    <i class="fa-solid fa-school"></i>
+
+                    <span>
+                        ${school}
+                    </span>
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            `;
+
+        }).join("");
+
+
+        checkerResult.innerHTML = `
+
+            <div class="checker-message checker-info">
+
+                <div class="checker-message-icon">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                </div>
+
+
+                <div class="checker-message-content">
+
+                    <strong>
+                        Did you mean?
+                    </strong>
+
+                    <span>
+                        We found a possible match.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="school-match-list">
+
+                ${matchList}
+
+            </div>
+
+        `;
+
+
+        /* Make possible matches clickable */
+
+        checkerResult
+            .querySelectorAll(".school-match")
+            .forEach(function (button) {
+
+                button.addEventListener("click", function () {
+
+                    const school = this.dataset.school;
+
+                    schoolInput.value = school;
+
+                    showSchoolFound(school);
+
+                });
+
+            });
+
+    }
+
+
+    /* =====================================================
+       SCHOOL NOT FOUND
+    ===================================================== */
+
+    function showSchoolNotFound(searchValue) {
+
+        checkerResult.innerHTML = `
+
+            <div class="checker-message checker-error">
+
+                <div class="checker-message-icon">
+
+                    <i class="fa-solid fa-circle-xmark"></i>
+
+                </div>
+
+
+                <div class="checker-message-content">
+
+                    <strong>
+                        School not found
+                    </strong>
+
+                    <span>
+                        "${searchValue}" is not currently
+                        on the Club One registered school list.
+                    </span>
+
+                    <small>
+                        Your school may still be eligible to join Club One.
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="/contact"
+                class="checker-contact-btn"
+            >
+
+                <i class="fa-solid fa-school"></i>
+
+                Tell us about your school
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        `;
+
+    }
+
+
+    /* =====================================================
+       CLEAR RESULT WHEN USER STARTS TYPING AGAIN
+    ===================================================== */
+
+    schoolInput.addEventListener("input", function () {
+
+        if (checkerResult.innerHTML !== "") {
+
+            checkerResult.innerHTML = "";
+
+        }
+
+    });
+
+});
