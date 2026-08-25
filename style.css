@@ -5740,4 +5740,82 @@ button {
         font-size: 12px;
     }
 
+} 
+
+/* =====================================================
+   MOBILE — EVENT ANNOUNCEMENT
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .event-announcement {
+        padding: 10px 14px;
+    }
+
+    .event-announcement-inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .event-announcement-inner > strong {
+        font-size: 11px;
+        letter-spacing: 0.4px;
+    }
+
+    .event-announcement-inner > span:not(.event-live-dot):not(.announcement-divider) {
+        font-size: 10px;
+    }
+
+    .announcement-divider {
+        display: none;
+    }
+
+    /* Countdown */
+
+    .announcement-countdown {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin: 3px 0;
+    }
+
+    .announcement-countdown > span {
+        min-width: 42px;
+        padding: 4px 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+    }
+
+    .announcement-countdown strong {
+        font-size: 15px;
+        line-height: 1;
+    }
+
+    .announcement-countdown small {
+        margin-top: 3px;
+        font-size: 7px;
+        line-height: 1;
+        letter-spacing: 0.5px;
+    }
+
+    /* Register button */
+
+    .announcement-button {
+        width: 100%;
+        max-width: 190px;
+        justify-content: center;
+        padding: 9px 14px;
+        font-size: 11px;
+        margin-top: 2px;
+    }
+
 }
